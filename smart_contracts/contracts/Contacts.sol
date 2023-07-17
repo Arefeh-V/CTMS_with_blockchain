@@ -85,20 +85,6 @@ contract Contacts {
         });
     }
 
-    function createConsent(
-        string memory _name
-    ) public onlyResearchers {
-        clinicalTrialsCount++;
-        clinicalTrials[clinicalTrialsCount] = ClinicalTrial({
-            id: clinicalTrialsCount,
-            parentId: 0,
-            name: _name,
-            createdBy: msg.sender,
-            createdAt: block.timestamp
-            
-        });
-    }
-
 
     function updateClinicalTrial(
         uint _clinicalTrialId,
